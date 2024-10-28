@@ -1,0 +1,13 @@
+def text_to_number_cipher(text):
+    text = text.upper()
+    cipher_text = ""
+    for char in text:
+        if char.isalpha():
+            number = ord(char) - 64
+            cipher_text += str(number) + " "
+        else:
+            cipher_text += char
+    return cipher_text
+
+text =input("Enter the word: ")
+print("Here is the code:", text_to_number_cipher(text))
